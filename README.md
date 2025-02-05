@@ -34,6 +34,7 @@ Finding the exact optimal order for visiting N goal nodes is computationally inf
 The results shown in the following table indicate a significant improvement in ordering time when using the model, especially as the number of goal nodes increases.
 
 |                                   **Average of 100 Experiments**                                                |
+|--------------|-------------------------------|----------------------------------|-------------------------------|
 | # Goal nodes | A* Avgerage ordering time (s) | Model avgerage Ordering time (s) | Ordering time improvement (s) |
 |--------------|-------------------------------|----------------------------------|-------------------------------|
 |       7      |            3.758              |               2.01               |             1.75              |
