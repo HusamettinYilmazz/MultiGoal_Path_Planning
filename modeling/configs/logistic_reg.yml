@@ -1,0 +1,29 @@
+
+model:
+  name: "Logistic Regression"
+  num_classes: 2
+
+training:
+  learning_rate: 0.001 #1e-3
+  optimizer: "AdamW"
+  weight_decay: [0.001, 0.01, 0.1, 1, 10, 100]  # Regularization strength
+
+
+grid_parameters:
+    C: [0.001, 0.01, 0.1, 1, 10, 100]  # Regularization strength
+    penalty: ['l1', 'l2']  # Regularization type
+    solver: ['liblinear', 'saga']  # Algorithm to use in optimization
+
+
+data:
+  dataset_name: "Path palnning Dataset"
+  dataset_path: "/home/husammm/Desktop/Courses/CS_courses/Path Planning/Path_planinng/data/combinedData.csv"
+  unordered_dataset_path: "/home/husammm/Desktop/Courses/CS_courses/Path Planning/unordered_goal_nodes.csv"
+  distances_dataset: "/home/husammm/Desktop/Courses/CS_courses/Path Planning/node_to_nodes_distances.csv"
+  save_path: "/home/husammm/Desktop/Courses/CS_courses/Path Planning/Path_planinng/modeling/Logistic regression/outputs/"
+
+experiment:
+  name: "Logistic path planning"
+  seed: 0
+  output_dir: "outputs"
+  description: "______"
